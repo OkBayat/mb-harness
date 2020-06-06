@@ -3,6 +3,7 @@ import {select_style} from './select-style';
 import {select_submit} from './select-submit';
 import {Select} from '../models/select';
 import {select_innerHTML} from './select-innerHTML';
+import {select_setValue} from './select-setValue';
 
 export function select(selector: string): Select {
     this.__elm = this.fixture.debugElement.query(By.css(selector));
@@ -11,6 +12,7 @@ export function select(selector: string): Select {
         element: this.__elm,
         submit: select_submit.bind(this),
         style: select_style.bind(this),
-        innerHTML: select_innerHTML.bind(this)
+        innerHTML: select_innerHTML.bind(this),
+        setValue: select_setValue.bind(this)
     }
 }

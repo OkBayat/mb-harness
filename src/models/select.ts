@@ -5,4 +5,5 @@ export interface Select {
     submit(eventObj?: any): void;
     style(styleName: string): string;
     innerHTML(): string;
+    setValue(value: number | string): void;
 }
