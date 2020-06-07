@@ -6,4 +6,5 @@ export interface Select {
     style(styleName: string): string;
     innerHTML(): string;
     setValue(value: number | string): void;
+    click(eventObj?: any): void;
 }
