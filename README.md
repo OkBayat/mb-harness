@@ -1,4 +1,4 @@
-# harness
+# mb-harness
 
 mb-harness is a JavaScript library for simplifying angular project testing. mb-harness helps you test your angular projects faster and better and keep your test code clean and readable. mb-harness combines powerful methods for accessing elements and manage the events and values.
 
