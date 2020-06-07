@@ -7,6 +7,7 @@ import {select_setValue} from './select-setValue';
 import {select_click} from './select-click';
 import {select_hasClass} from './select-hasClass';
 import {select_hasAttr} from './select-hasAttr';
+import {select_getAttr} from './select-getAttr';
 
 export function select(selector: string): Select {
     this.__elm = this.fixture.debugElement.query(By.css(selector));
@@ -19,6 +20,7 @@ export function select(selector: string): Select {
         setValue: select_setValue.bind(this),
         click: select_click.bind(this),
         hasClass: select_hasClass.bind(this),
-        hasAttr: select_hasAttr.bind(this)
+        hasAttr: select_hasAttr.bind(this),
+        getAttr: select_getAttr.bind(this)
     }
 }

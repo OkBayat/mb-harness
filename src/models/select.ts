@@ -9,4 +9,5 @@ export interface Select {
     click(eventObj?: any): void;
     hasClass(className: string): boolean;
     hasAttr(attrName: string): boolean;
+    getAttr(attrName: string): string;
 }
