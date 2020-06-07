@@ -15,6 +15,7 @@ import {Select} from 'mb-harness/dist/src/models/select';
 @MbHarness(InsertOrderComponent)
 export class InsertOrderComponentHarness extends Harness<InsertOrderComponent> {
     totalQuantityInput(): Select {
+        // You can select element by css selector
         return this.select('input#totalQuantity');
     }
     priceInput(): Select {
