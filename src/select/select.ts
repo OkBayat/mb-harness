@@ -5,6 +5,7 @@ import {Select} from '../models/select';
 import {select_innerHTML} from './select-innerHTML';
 import {select_setValue} from './select-setValue';
 import {select_click} from './select-click';
+import {select_hasClass} from './select-hasClass';
 
 export function select(selector: string): Select {
     this.__elm = this.fixture.debugElement.query(By.css(selector));
@@ -15,6 +16,7 @@ export function select(selector: string): Select {
         style: select_style.bind(this),
         innerHTML: select_innerHTML.bind(this),
         setValue: select_setValue.bind(this),
-        click: select_click.bind(this)
+        click: select_click.bind(this),
+        hasClass: select_hasClass.bind(this)
     }
 }

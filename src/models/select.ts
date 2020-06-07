@@ -7,4 +7,5 @@ export interface Select {
     innerHTML(): string;
     setValue(value: number | string): void;
     click(eventObj?: any): void;
+    hasClass(className: string): boolean;
 }

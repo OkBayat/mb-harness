@@ -1,6 +1,6 @@
 {
   "name": "mb-harness",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "description": "Angular testing library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
