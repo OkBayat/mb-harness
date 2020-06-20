@@ -10,4 +10,5 @@ export interface Select {
     hasClass(className: string): boolean;
     hasAttr(attrName: string): boolean;
     getAttr(attrName: string): string;
+    value(): string | number;
 }
