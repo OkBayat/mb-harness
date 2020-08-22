@@ -10,8 +10,12 @@ import {select_hasAttr} from './select-hasAttr';
 import {select_getAttr} from './select-getAttr';
 import {select_value} from './select-value';
 
-export function select(selector: string): Select {
-    this.__elm = this.fixture.debugElement.query(By.css(selector));
+export function select(selector: any): Select {
+    const query = typeof selector === 'string'
+        ? By.css(selector)
+        : selector;
+
+    this.__elm = this.fixture.debugElement.query(query);
 
     return {
         element: this.__elm,
