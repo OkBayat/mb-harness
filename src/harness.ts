@@ -1,9 +1,10 @@
-import {ComponentFixture, TestBedStatic} from '@angular/core/testing';
+import {ComponentFixture, TestBed, TestBedStatic} from '@angular/core/testing';
 import {select} from './select/select';
 import {selectAll} from './select-all/select-all';
-import {dispatchKeyboardEvent} from "./dispatch-events/dispatch-keyboard-event";
+import {dispatchKeyboardEvent} from './dispatch-events/dispatch-keyboard-event';
 
 function init<T>(testBed: TestBedStatic): Harness<T> {
+    this.testBed = testBed;
     this.fixture = testBed.createComponent(this.__component);
     this.component = this.fixture.componentInstance;
     this.fixture.detectChanges();
@@ -24,6 +25,7 @@ export function MbHarness(component) {
 }
 
 export class Harness<T> {
+    testBed: TestBed;
     fixture: ComponentFixture<T>;
     component: T;
     init = init;
