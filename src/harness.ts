@@ -1,4 +1,4 @@
-import {ComponentFixture, TestBedStatic} from '@angular/core/testing';
+import {ComponentFixture, TestBed, TestBedStatic} from '@angular/core/testing';
 import {select} from './select/select';
 import {selectAll} from './select-all/select-all';
 import {dispatchKeyboardEvent} from './dispatch-events/dispatch-keyboard-event';
