@@ -22,7 +22,7 @@ export class Harness<T> {
     private __component;
     private __elm;
 
-    constructor(public testBed: TestBedStatic, skipDetectChanges: boolean) {
+    constructor(public testBed: TestBedStatic, skipDetectChanges?: boolean) {
         this.init(skipDetectChanges);
     }
 
