@@ -22,17 +22,18 @@ export class Harness<T> {
     private __component;
     private __elm;
 
-    constructor(public testBed: TestBedStatic) {
-        this.init();
+    constructor(public testBed: TestBedStatic, skipDetectChanges: boolean) {
+        this.init(skipDetectChanges);
     }
 
-    private init(): void {
+    private init(skipDetectChanges: boolean): void {
         this.select = select.bind(this);
         this.selectAll = selectAll.bind(this);
         this.dispatchKeyboardEvent = dispatchKeyboardEvent.bind(this);
 
         this.fixture = this.testBed.createComponent(this.__component);
         this.component = this.fixture.componentInstance;
+        if (skipDetectChanges) { return; }
         this.fixture.detectChanges();
     }
 }
