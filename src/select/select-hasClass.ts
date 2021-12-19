@@ -1,3 +1,3 @@
 export function select_hasClass(className: string): boolean {
-    return this.__elm.nativeElement.classList.contains(className);
+    return this.__elm[0].nativeElement.classList.contains(className);
 }
