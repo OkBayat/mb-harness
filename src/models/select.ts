@@ -11,6 +11,7 @@ export interface Select {
     hasAttr(attrName: string): boolean;
     getAttr(attrName: string): string;
     value(): string | number;
-    contains(value: string): Select;
+    thatContains(value: string): Select;
+    includes(value: string): boolean;
     exist(): boolean;
 }

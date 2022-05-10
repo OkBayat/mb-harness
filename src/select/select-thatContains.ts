@@ -1,6 +1,6 @@
 import {Select} from '../models/select';
 
-export function select_contains(value: string): Select {
+export function select_thatContains(value: string): Select {
     const items = [];
 
     for (let item of this.element) {

@@ -9,8 +9,9 @@ import {select_hasClass} from './select-hasClass';
 import {select_hasAttr} from './select-hasAttr';
 import {select_getAttr} from './select-getAttr';
 import {select_value} from './select-value';
-import {select_contains} from './select-contains';
 import {select_exist} from './select-exist';
+import {select_thatContains} from './select-thatContains';
+import {select_includes} from './select-includes';
 
 export function select(selector: any): Select {
     const query = typeof selector === 'string'
@@ -30,7 +31,8 @@ export function select(selector: any): Select {
         hasAttr: select_hasAttr.bind(this),
         getAttr: select_getAttr.bind(this),
         value: select_value.bind(this),
-        contains: select_contains,
+        thatContains: select_thatContains,
+        includes: select_includes,
         exist: select_exist.bind(this)
     };
 }
