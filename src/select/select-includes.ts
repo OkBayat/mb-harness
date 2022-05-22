@@ -1,3 +1,9 @@
 export function select_includes(value: string): boolean {
-    return this.element[0].nativeElement.innerText.includes(value);
+    for (let item of this.element) {
+        if (item.nativeElement.innerText.includes(value)) {
+            return true
+        }
+    }
+
+    return false;
 }
