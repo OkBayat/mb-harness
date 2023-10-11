@@ -8,7 +8,7 @@
   "devDependencies": {
     "tslint": "^6.1.2",
     "@angular/platform-browser": "^9.1.9",
-    "@angular/core": "^9.1.9",
+    "@angular/core": "^10.2.5",
     "@types/jasmine": "^3.5.10",
     "jasmine": "^3.5.0",
     "nyc": "^15.0.1",
